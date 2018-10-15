@@ -4,10 +4,12 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class MessageService {
+  callCount = 0;
 
   constructor() { }
 
   show(prefix: string) {
-    return `<[${prefix}]>`;
+    this.callCount += 1;
+    return `<[${prefix}]> (called ${this.callCount})`;
   }
 }

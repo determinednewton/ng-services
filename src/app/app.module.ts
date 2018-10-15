@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { WarningComponent } from './warning/warning.component';
 import { SuccessComponent } from './success/success.component';
-import {MessageService} from './message.service';
 
 @NgModule({
   declarations: [
@@ -15,16 +14,7 @@ import {MessageService} from './message.service';
   imports: [
     BrowserModule
   ],
-  providers: [
-    {
-      provide: MessageService,
-      useValue: {
-        show() {
-          return 'You have been hacked!';
-        }
-      },
-    }
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
