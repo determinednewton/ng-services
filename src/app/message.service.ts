@@ -8,6 +8,6 @@ export class MessageService {
   constructor() { }
 
   show(prefix: string) {
-    return `${prefix} works!`;
+    return `<[${prefix}]>`;
   }
 }
