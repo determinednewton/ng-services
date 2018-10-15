@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-success',
@@ -6,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./success.component.css']
 })
 export class SuccessComponent implements OnInit {
-  message = 'success works!';
+  message: string;
 
-  constructor() { }
+  constructor(messageService: MessageService) {
+    this.message = messageService.show('success');
+  }
 
   ngOnInit() {
   }

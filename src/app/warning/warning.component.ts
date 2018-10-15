@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-warning',
@@ -6,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./warning.component.css']
 })
 export class WarningComponent implements OnInit {
-  message = 'warning works!';
+  message: string;
 
-  constructor() { }
+  constructor(messageService: MessageService) {
+    this.message = messageService.show('warning');
+  }
 
   ngOnInit() {
   }
