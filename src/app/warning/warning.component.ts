@@ -4,7 +4,8 @@ import { MessageService } from '../message.service';
 @Component({
   selector: 'app-warning',
   templateUrl: './warning.component.html',
-  styleUrls: ['./warning.component.css']
+  styleUrls: ['./warning.component.css'],
+  providers: [MessageService],
 })
 export class WarningComponent implements OnInit {
   message: string;

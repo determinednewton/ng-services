@@ -4,7 +4,8 @@ import { MessageService } from '../message.service';
 @Component({
   selector: 'app-success',
   templateUrl: './success.component.html',
-  styleUrls: ['./success.component.css']
+  styleUrls: ['./success.component.css'],
+  providers: [MessageService],
 })
 export class SuccessComponent implements OnInit {
   message: string;
