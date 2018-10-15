@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { WarningComponent } from './warning/warning.component';
 import { SuccessComponent } from './success/success.component';
 import {MessageService} from './message.service';
-import {BestMessageService} from './best-message.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +18,11 @@ import {BestMessageService} from './best-message.service';
   providers: [
     {
       provide: MessageService,
-      useClass: BestMessageService,
+      useValue: {
+        show() {
+          return 'You have been hacked!';
+        }
+      },
     }
   ],
   bootstrap: [AppComponent]
