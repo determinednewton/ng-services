@@ -6,7 +6,9 @@ import { Injectable } from '@angular/core';
 export class MessageService {
   callCount = 0;
 
-  constructor() { }
+  constructor() {
+    console.log('MessageService.constructor()');
+  }
 
   show(prefix: string) {
     this.callCount += 1;
